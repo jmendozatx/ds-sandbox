@@ -1,6 +1,6 @@
 {
   "name": "@jmendozatx/ds-sandbox",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Sandbox design-system package for demoing the team operating model: GitHub Project board + Changesets release flow.",
   "type": "module",
   "main": "dist/index.js",
