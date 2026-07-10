@@ -34,11 +34,11 @@ The publish target here is **GitHub Packages** (free, zero external setup). In p
 3. **Push it:**
    ```bash
    cd ds-sandbox
-   git init -b main
+   git init -b master
    git add .
    git commit -m "chore: sandbox scaffold"
    git remote add origin https://github.com/<owner>/ds-sandbox.git
-   git push -u origin main
+   git push -u origin master
    ```
 
 4. **Install locally** (also generates a lockfile you can commit later to speed CI):
@@ -47,7 +47,7 @@ The publish target here is **GitHub Packages** (free, zero external setup). In p
    npm run build   # sanity check: tsc emits dist/
    ```
 
-That's the repo. The release workflow (`.github/workflows/release.yml`) is already wired and will run on the next push to `main`.
+That's the repo. The release workflow (`.github/workflows/release.yml`) is already wired and will run on the next push to `master`.
 
 > **Want the simplest possible demo?** Open `release.yml` and delete the `publish: npm run release` line (and you can ignore GitHub Packages entirely). The flow still opens the **Version Packages** PR and updates the changelog on merge — you just skip the registry publish. Add it back when you want the full story.
 
@@ -125,7 +125,7 @@ Run this *during* the meeting. It's the sequence that makes versioning click.
    ```
    Pick **minor**, and type one sentence: *"Add ghost variant to Button."* This writes a small file under `.changeset/`.
 
-3. **Commit, push, open a PR, merge it** to `main`.
+3. **Commit, push, open a PR, merge it** to `master`.
 
 4. **Watch the magic.** Within a minute the Release workflow opens a PR titled **"Version Packages."** Open it and show the room the diff: the version bumps `0.1.0 → 0.2.0`, and `CHANGELOG.md` now has a real entry built from your sentence. *This is the per-release changelog replacing per-branch changelogs.*
 
