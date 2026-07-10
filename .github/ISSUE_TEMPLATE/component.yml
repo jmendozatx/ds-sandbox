@@ -1,0 +1,15 @@
+name: Component / Design System work
+description: A new component, token, or enhancement
+labels: ["type: component"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs building?
+    validations:
+      required: true
+  - type: input
+    id: consumer
+    attributes:
+      label: Which consumer needs it?
+      placeholder: Marketing / Auto Navigator / Dealer SaaS / Shared

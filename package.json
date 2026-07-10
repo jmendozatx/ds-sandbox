@@ -1,0 +1,28 @@
+{
+  "name": "@jmendozatx/ds-sandbox",
+  "version": "0.1.0",
+  "description": "Sandbox design-system package for demoing the team operating model: GitHub Project board + Changesets release flow.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "npm run build && changeset publish"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmendozatx/ds-sandbox.git"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "typescript": "^5.6.3"
+  }
+}

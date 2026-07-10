@@ -1,0 +1,15 @@
+name: Bug
+description: Something in the design system is broken
+labels: ["type: bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What's broken, and where?
+    validations:
+      required: true
+  - type: input
+    id: consumer
+    attributes:
+      label: Which consumer hit it?
+      placeholder: Marketing / Auto Navigator / Dealer SaaS / Shared
